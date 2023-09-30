@@ -7,6 +7,28 @@
     </head>
     <body>
         <header>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100" height="100">
+                <style>
+                    .wave {
+                        fill: #bd93f9;
+                        animation: wave 4s ease-in-out infinite;
+                        transform-origin: center bottom;
+                    }
+        
+                    @keyframes wave {
+                        0% {
+                            transform: scaleY(1);
+                        }
+                        50% {
+                            transform: scaleY(0.8);
+                        }
+                        100% {
+                            transform: scaleY(1);
+                        }
+                    }
+                </style>
+                <path class="wave" d="M0,600c0,0,0-200,200-200s200,200,400,200s200-200,200-200v200H0z"/>
+            </svg>
             <h1>Vitajte v spoločnosti Sweetwater s.r.o.</h1>
             <nav>
                 <ul>
@@ -37,7 +59,7 @@
                 <h2>Kontakt</h2>
                 <p>Ak máte akékoľvek otázky alebo záujem, neváhajte nás kontaktovať:</p>
                 <ul>
-                    <li>Email: info@sweetwater.sk</li>
+                    <li>Email: <a href="mailto:info@sweetwater.sk">info@sweetwater.sk</a></li>
                     <li>Adresa: 943 01 Štúrovo, Komenského 317/135, Slovakia</li>
                 </ul>
             </section>
