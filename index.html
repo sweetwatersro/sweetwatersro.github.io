@@ -4,6 +4,17 @@
         <meta charset="UTF-8">
         <title>Sweetwater s.r.o.</title>
         <link rel="stylesheet" href="style.css">
+        <script>
+            // Get the user's browser language
+            var userLang = navigator.language || navigator.userLanguage;
+        
+            // Redirect to the appropriate language version
+            if (userLang === 'sk') {
+                window.location.href = 'index.sk.html';
+            } else if (userLang !== 'hu') {
+                window.location.href = 'index.en.html';
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -20,6 +31,11 @@
             <section id="about">
                 <h2>Rólunk</h2>
                 <p>A Sweetwater s.r.o. egy családi vállalkozás, amely IT tanácsadással és környezeti és vízminőségi tanulmányokkal foglalkozik. Célunk, hogy ügyfeleinknek a lehető legjobb szolgáltatást és termékeket nyújtsuk, hogy biztosítsuk számukra a tiszta, biztonságos ivóvizet.</p>
+                <p>A cég 2022-ben lett megalapítva.</p>
+                <p>Munkáink:</p>
+                <ol>
+                    <li>Kocsolaik halastavak állapotfelmérése és megújítási terv kidolgozása.</li>
+                </ol>
             </section>
             <section id="services">
                 <h2>Szolgáltatásaink</h2>
