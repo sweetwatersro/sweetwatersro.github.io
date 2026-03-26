@@ -1,45 +1,48 @@
 :root{
-    --bg:#2a2139;
-    --fg:#f8f8f2;
-    --accent:#bd93f9;
-    --accent-2:#ff79c6;
-    --muted:rgba(248,248,242,0.8);
+    --bg:#f5f7fa;
+    --fg:#0f1720;
+    --accent:#0b5cff;
+    --accent-2:#0369a1;
+    --muted:rgba(15,23,32,0.6);
 }
 
 *{box-sizing:border-box}
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    max-width: 960px;
-    padding: 20px;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    max-width: 980px;
+    padding: 28px;
     margin: 0 auto;
-    line-height:1.5;
+    line-height:1.6;
 }
 
 header{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
 header svg{width:80px;height:auto;flex:0 0 80px}
-header h1{font-size:1.4rem;margin:0;color:var(--accent-2)}
-nav ul{list-style:none;padding:0;margin:0;display:flex;gap:12px}
-nav a{color:var(--accent);text-decoration:none;padding:6px 8px;border-radius:6px}
-nav a:hover{background:rgba(255,255,255,0.03)}
+header h1{font-size:1.2rem;margin:0;color:var(--fg);font-weight:700}
+.header-controls{margin-left:auto;display:flex;gap:12px;align-items:center}
+.lang-select{background:#fff;border:1px solid #e6eef8;padding:8px;border-radius:6px;color:var(--fg)}
 
-main{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
+/* Simplified header style, removed navigation look */
+main{background:#ffffff;padding:22px;border-radius:8px;box-shadow:0 1px 6px rgba(16,24,40,0.06)}
 section{margin-bottom:18px}
-h2{color:var(--accent-2);margin-top:0}
+h2{color:var(--accent-2);margin-top:0;font-size:1.1rem}
 
 footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
 
 a{color:var(--accent);}
-a:hover{color:#f1fa8c}
+a:hover{color:#084c8a}
 
-button{background-color:var(--accent);color:var(--fg);border:none;padding:10px 16px;border-radius:6px;font-weight:600;cursor:pointer}
-button:hover{background:var(--accent-2);color:var(--bg)}
+button{background-color:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:6px;font-weight:600;cursor:pointer}
+button:hover{background:var(--accent-2)}
+
+/* make the svg more corporate: subtle blue */
+.wave{fill:var(--accent-2)}
 
 /* Responsive tweaks */
 @media (max-width:600px){
     body{padding:14px}
-    header{justify-content:center}
-    nav ul{flex-wrap:wrap;justify-content:center}
-    header h1{font-size:1.1rem;text-align:center}
+    header{justify-content:flex-start}
+    .header-controls{margin-left:0;width:100%;justify-content:flex-end}
+    header h1{font-size:1rem}
 }
