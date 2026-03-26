@@ -9,12 +9,9 @@
     <body>
         <header>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100" height="100">
-                <style>
-                    .wave { fill: #0369a1; }
-                </style>
                 <path class="wave" d="M0,600c0,0,0-200,200-200s200,200,400,200s200-200,200-200v200H0z"/>
             </svg>
-            <h1>Welcome to Sweetwater s.r.o.</h1>
+            <h1>Sweetwater s.r.o.</h1>
             <div class="header-controls">
                 <select id="lang" class="lang-select" onchange="location = this.value">
                     <option value="index.html">HU — Magyar</option>
@@ -22,9 +19,14 @@
                     <option value="index.sk.html">SK — Slovensky</option>
                 </select>
             </div>
+            <nav class="menu" aria-label="Main menu">
+                <button data-target="about" class="active">About</button>
+                <button data-target="services">Services</button>
+                <button data-target="contact">Contact</button>
+            </nav>
         </header>
         <main>
-            <section id="about">
+            <section id="about" class="active">
                 <h2>About Us</h2>
                 <p>Sweetwater s.r.o. is a family-owned business that specializes in IT consulting and environmental and water quality studies. Our goal is to provide our clients with the best possible services and products to ensure clean, safe drinking water.</p>
                 <p>The company was founded in 2022.</p>
@@ -52,5 +54,23 @@
         <footer>
             <p>&copy; 2026 Sweetwater s.r.o. All rights reserved.</p>
         </footer>
+        <script>
+            document.querySelectorAll('nav.menu button').forEach(function(btn){
+                btn.addEventListener('click', function(){
+                    document.querySelectorAll('nav.menu button').forEach(b=>b.classList.remove('active'));
+                    btn.classList.add('active');
+                    var target = btn.getAttribute('data-target');
+                    document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+            (function(){
+                var sel = document.getElementById('lang');
+                var current = window.location.pathname.split('/').pop();
+                if(current==='index.en.html') sel.value='index.en.html';
+                else if(current==='index.sk.html') sel.value='index.sk.html';
+                else sel.value='index.html';
+            })();
+        </script>
     </body>
 </html>

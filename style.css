@@ -1,8 +1,8 @@
 :root{
     --bg:#f5f7fa;
     --fg:#0f1720;
-    --accent:#0b5cff;
-    --accent-2:#0369a1;
+    --accent:#6b21a8; /* returned purple accent */
+    --accent-2:#7c3aed;
     --muted:rgba(15,23,32,0.6);
 }
 
@@ -23,20 +23,24 @@ header h1{font-size:1.2rem;margin:0;color:var(--fg);font-weight:700}
 .header-controls{margin-left:auto;display:flex;gap:12px;align-items:center}
 .lang-select{background:#fff;border:1px solid #e6eef8;padding:8px;border-radius:6px;color:var(--fg)}
 
-/* Simplified header style, removed navigation look */
+nav.menu{display:flex;gap:10px;margin-top:12px}
+nav.menu button{background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:6px;cursor:pointer;font-weight:600;color:var(--muted)}
+nav.menu button.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border-color:rgba(0,0,0,0.06)}
+
 main{background:#ffffff;padding:22px;border-radius:8px;box-shadow:0 1px 6px rgba(16,24,40,0.06)}
-section{margin-bottom:18px}
+section{margin-bottom:18px;display:none}
+section.active{display:block}
 h2{color:var(--accent-2);margin-top:0;font-size:1.1rem}
 
 footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
 
-a{color:var(--accent);}
-a:hover{color:#084c8a}
+a{color:var(--accent);} 
+a:hover{color:var(--accent-2)}
 
-button{background-color:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:6px;font-weight:600;cursor:pointer}
-button:hover{background:var(--accent-2)}
+button.cta{background-color:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:6px;font-weight:600;cursor:pointer}
+button.cta:hover{background:var(--accent-2)}
 
-/* make the svg more corporate: subtle blue */
+/* svg accent */
 .wave{fill:var(--accent-2)}
 
 /* Responsive tweaks */
@@ -45,4 +49,5 @@ button:hover{background:var(--accent-2)}
     header{justify-content:flex-start}
     .header-controls{margin-left:0;width:100%;justify-content:flex-end}
     header h1{font-size:1rem}
+    nav.menu{width:100%;overflow:auto}
 }
