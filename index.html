@@ -2,16 +2,17 @@
 <html lang="hu">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sweetwater s.r.o.</title>
         <link rel="stylesheet" href="style.css">
         <script>
-            // Get the user's browser language
-            var userLang = navigator.language || navigator.userLanguage;
-        
+            // Get the user's browser language - use startsWith to cover sk SK etc.
+            var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+
             // Redirect to the appropriate language version
-            if (userLang === 'sk') {
+            if (userLang && userLang.startsWith('sk')) {
                 window.location.href = 'index.sk.html';
-            } else if (userLang !== 'hu') {
+            } else if (userLang && !userLang.startsWith('hu')) {
                 window.location.href = 'index.en.html';
             }
         </script>
@@ -76,7 +77,7 @@
             </section>
         </main>
         <footer>
-            <p>&copy; 2023 Sweetwater s.r.o. Minden jog fenntartva.</p>
+            <p>&copy; 2026 Sweetwater s.r.o. Minden jog fenntartva.</p>
         </footer>
     </body>
 </html>

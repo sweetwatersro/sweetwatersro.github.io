@@ -1,36 +1,45 @@
+:root{
+    --bg:#2a2139;
+    --fg:#f8f8f2;
+    --accent:#bd93f9;
+    --accent-2:#ff79c6;
+    --muted:rgba(248,248,242,0.8);
+}
+
+*{box-sizing:border-box}
 body {
-    background-color: #2a2139;
-    color: #f8f8f2;
-    font-family: 'Roboto Mono', monospace;
-    width: 960px;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    max-width: 960px;
+    padding: 20px;
     margin: 0 auto;
+    line-height:1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #ff79c6;
-    font-family: 'Montserrat', sans-serif;
-}
+header{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+header svg{width:80px;height:auto;flex:0 0 80px}
+header h1{font-size:1.4rem;margin:0;color:var(--accent-2)}
+nav ul{list-style:none;padding:0;margin:0;display:flex;gap:12px}
+nav a{color:var(--accent);text-decoration:none;padding:6px 8px;border-radius:6px}
+nav a:hover{background:rgba(255,255,255,0.03)}
 
-a {
-    color: #bd93f9;
-    text-decoration: none;
-}
+main{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px}
+section{margin-bottom:18px}
+h2{color:var(--accent-2);margin-top:0}
 
-a:hover {
-    color: #f1fa8c;
-}
+footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem}
 
-button {
-    background-color: #bd93f9;
-    color: #f8f8f2;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-}
+a{color:var(--accent);}
+a:hover{color:#f1fa8c}
 
-button:hover {
-    background-color: #f1fa8c;
-    color: #2a2139;
+button{background-color:var(--accent);color:var(--fg);border:none;padding:10px 16px;border-radius:6px;font-weight:600;cursor:pointer}
+button:hover{background:var(--accent-2);color:var(--bg)}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+    body{padding:14px}
+    header{justify-content:center}
+    nav ul{flex-wrap:wrap;justify-content:center}
+    header h1{font-size:1.1rem;text-align:center}
 }
