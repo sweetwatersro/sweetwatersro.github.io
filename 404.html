@@ -1,0 +1,13 @@
+<!doctype html><html lang="sk" dir="ltr"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'sha256-0zuTk3OPHiquPlySZs0VtmlWgDgOfsx56uolvd6G9BE='; connect-src https://caritas.sweetwater.sk; base-uri 'none'; form-action 'none'"><meta name="referrer" content="same-origin"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Sweetwater s.r.o.</title><meta name="description" content="Konzultácie, prevádzka IT a skladovanie."><meta name="robots" content="noindex"><link rel="icon" href="data:,"><link rel="canonical" href="https://sweetwater.sk/"><link rel="stylesheet" href="/assets/site.16f608f84e3d.css"></head><body><div class="cw-site cw-document"><a class="cw-skip" href="#tartalom">Preskočiť na obsah</a><main id="tartalom" class="cw-wrap"><h1>Stránka sa nenašla.</h1><a class="cw-btn" href="/">Späť na úvod</a></main></div><script>(function companyViewBeacon()       {
+  const send = (name        )       => {
+    try {
+      navigator.sendBeacon("https://caritas.sweetwater.sk/api/company-view", JSON.stringify({ path: location.pathname, referrer: document.referrer, language: navigator.language.split(",")[0], name }));
+    } catch { /* A mérés hibája nem akadályozza az oldalt. */ }
+  };
+  send("view");
+  document.addEventListener("click", (event) => {
+    try {
+      if (event.target instanceof Element && event.target.closest('a[href^="mailto:"]')) send("kapcsolat");
+    } catch { /* A kapcsolat mérés nélkül is megnyitható. */ }
+  });
+})()</script></body></html>

@@ -1,90 +1,37 @@
-<!DOCTYPE html>
-<html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sweetwater s.r.o.</title>
-        <link rel="stylesheet" href="style.css">
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="cc4ddf2e-4f2b-48f7-ab43-7f7af95a1c51"></script>
-        <script>
-            // client-language redirect only if user prefers another language
-            var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (userLang && userLang.startsWith('sk')) {
-                window.location.href = 'index.sk.html';
-            } else if (userLang && !userLang.startsWith('hu')) {
-                window.location.href = 'index.en.html';
-            }
-        </script>
-    </head>
-    <body>
-        <header>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100" height="100">
-                <path class="wave" d="M0,600c0,0,0-200,200-200s200,200,400,200s200-200,200-200v200H0z"/>
-            </svg>
-            <h1>Sweetwater s.r.o.</h1>
-            <div class="header-controls">
-                <label for="lang" class="visually-hidden">Nyelv</label>
-                <select id="lang" class="lang-select" onchange="location = this.value">
-                    <option value="index.html">HU — Magyar</option>
-                    <option value="index.en.html">EN — English</option>
-                    <option value="index.sk.html">SK — Slovensky</option>
-                </select>
-            </div>
-            <nav class="menu" aria-label="Főmenü">
-                <button data-target="about" class="active">Rólunk</button>
-                <button data-target="services">Szolgáltatások</button>
-                <button data-target="contact">Kapcsolat</button>
-            </nav>
-        </header>
-        <main>
-            <section id="about" class="active">
-                <h2>Rólunk</h2>
-                <p>A Sweetwater s.r.o. egy családi vállalkozás, amely IT tanácsadással és környezeti és vízminőségi tanulmányokkal foglalkozik. Célunk, hogy ügyfeleinknek a lehető legjobb szolgáltatást és termékeket nyújtsuk, hogy biztosítsuk számukra a tiszta, biztonságos ivóvizet.</p>
-                <p>A cég 2022-ben lett megalapítva.</p>
-                <p>Munkáink:</p>
-                <ol>
-                    <li>Kocsolai halastavak állapotfelmérése és megújítási terv kidolgozása.</li>
-                </ol>
-            </section>
-            <section id="services">
-                <h2>Szolgáltatásaink</h2>
-                <ul>
-                    <li>IT tanácsadás</li>
-                    <li>Környezeti és vízminőségi tanulmányok</li>
-                </ul>
-            </section>
-            <section id="contact">
-                <h2>Kapcsolat</h2>
-                <p>Kérjük, lépjen velünk kapcsolatba bármilyen kérdéssel vagy érdeklődéssel kapcsolatban:</p>
-                <ul>
-                    <li>Email: <a href="mailto:info@sweetwater.sk">info@sweetwater.sk</a></li>
-                    <li>Cím: 943 01 Štúrovo, Komenského 317/135, Slovakia</li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 Sweetwater s.r.o. Minden jog fenntartva.</p>
-        </footer>
-        <script>
-            // Simple menu behaviour: only one section visible at a time
-            document.querySelectorAll('nav.menu button').forEach(function(btn){
-                btn.addEventListener('click', function(){
-                    document.querySelectorAll('nav.menu button').forEach(b=>b.classList.remove('active'));
-                    btn.classList.add('active');
-                    var target = btn.getAttribute('data-target');
-                    document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
-                    document.getElementById(target).classList.add('active');
-                });
-            });
-            // Keep language select in sync
-            (function(){
-                var map = { 'index.html':'index.html','index.en.html':'index.en.html','index.sk.html':'index.sk.html' };
-                var sel = document.getElementById('lang');
-                var current = window.location.pathname.split('/').pop() || 'index.html';
-                if(current==='index.en.html') sel.value='index.en.html';
-                else if(current==='index.sk.html') sel.value='index.sk.html';
-                else sel.value='index.html';
-            })();
-        </script>
-    </body>
-</html>
+<!doctype html><html lang="sk" dir="ltr"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'sha256-0zuTk3OPHiquPlySZs0VtmlWgDgOfsx56uolvd6G9BE='; connect-src https://caritas.sweetwater.sk; base-uri 'none'; form-action 'none'"><meta name="referrer" content="same-origin"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Sweetwater s.r.o.</title><meta name="description" content="Konzultácie, prevádzka IT a skladovanie."><link rel="icon" href="data:,"><link rel="canonical" href="https://sweetwater.sk/"><link rel="stylesheet" href="/assets/site.16f608f84e3d.css"></head><body><svg class="cw-sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="cw-s-minicam" viewBox="0 0 8 6"><path class="cw-p-ol" d="M0 0h7v1h-7zM0 1h1v1h-1zM7 1h1v1h-1zM0 2h1v1h-1zM7 2h1v1h-1zM0 3h7v1h-7zM3 4h2v1h-2zM1 5h5v1h-5z"></path><path class="cw-p-gl" d="M1 1h5v1h-5z"></path><path class="cw-p-bk" d="M6 1h1v1h-1zM6 2h1v1h-1z"></path><path class="cw-p-ok" d="M1 2h1v1h-1z"></path><path class="cw-p-gr" d="M2 2h4v1h-4z"></path></symbol><symbol id="cw-s-minirec" viewBox="0 0 8 6"><path class="cw-p-ol" d="M0 0h7v1h-7zM0 1h1v1h-1zM7 1h1v1h-1zM0 2h1v1h-1zM7 2h1v1h-1zM0 3h7v1h-7zM3 4h2v1h-2zM1 5h5v1h-5z"></path><path class="cw-p-gl" d="M1 1h5v1h-5z"></path><path class="cw-p-bk" d="M6 1h1v1h-1zM6 2h1v1h-1z"></path><path class="cw-p-re" d="M1 2h1v1h-1z"></path><path class="cw-p-gr" d="M2 2h4v1h-4z"></path></symbol><symbol id="cw-s-minihouse" viewBox="0 0 8 8"><path class="cw-p-ol" d="M3 0h2v1h-2zM2 1h1v1h-1zM5 1h1v1h-1zM1 2h1v1h-1zM6 2h1v1h-1zM0 3h1v1h-1zM7 3h1v1h-1zM1 4h1v1h-1zM6 4h1v1h-1zM1 5h1v1h-1zM6 5h1v1h-1zM1 6h1v1h-1zM6 6h1v1h-1zM1 7h6v1h-6z"></path><path class="cw-p-te" d="M3 1h2v1h-2zM2 2h4v1h-4zM1 3h6v1h-6z"></path><path class="cw-p-cr" d="M2 4h4v1h-4zM3 5h1v1h-1zM5 5h1v1h-1zM2 6h2v1h-2zM5 6h1v1h-1z"></path><path class="cw-p-go" d="M2 5h1v1h-1z"></path><path class="cw-p-br" d="M4 5h1v1h-1zM4 6h1v1h-1z"></path></symbol><symbol id="cw-s-lock" viewBox="0 0 6 7"><path class="cw-p-ol" d="M1 0h4v1h-4zM1 1h1v1h-1zM4 1h1v1h-1zM0 2h6v1h-6zM0 3h1v1h-1zM5 3h1v1h-1zM0 4h1v1h-1zM3 4h1v1h-1zM5 4h1v1h-1zM0 5h1v1h-1zM5 5h1v1h-1zM0 6h6v1h-6z"></path><path class="cw-p-go" d="M1 3h4v1h-4zM1 4h2v1h-2zM4 4h1v1h-1zM1 5h4v1h-4z"></path></symbol><symbol id="cw-s-minicat" viewBox="0 0 8 7"><path class="cw-p-ol" d="M0 0h1v1h-1zM4 0h1v1h-1zM7 3h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1zM1 6h2v1h-2zM4 6h2v1h-2z"></path><path class="cw-p-gr" d="M0 1h5v1h-5zM0 2h1v1h-1zM2 2h1v1h-1zM4 2h1v1h-1zM0 3h2v1h-2zM3 3h2v1h-2zM1 4h1v1h-1zM3 4h1v1h-1zM5 4h1v1h-1zM7 4h1v1h-1zM1 5h7v1h-7z"></path><path class="cw-p-lf" d="M1 2h1v1h-1zM3 2h1v1h-1z"></path><path class="cw-p-pi" d="M2 3h1v1h-1z"></path></symbol><symbol id="cw-s-minirooster" viewBox="0 0 7 7"><path class="cw-p-re" d="M2 0h2v1h-2z"></path><path class="cw-p-te" d="M1 1h3v1h-3zM1 2h1v1h-1zM3 2h1v1h-1zM2 3h3v1h-3zM2 4h4v1h-4zM1 5h4v1h-4z"></path><path class="cw-p-ol" d="M2 2h1v1h-1z"></path><path class="cw-p-go" d="M4 2h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1z"></path><path class="cw-p-lf" d="M0 3h1v1h-1zM0 4h2v1h-2z"></path></symbol><symbol id="cw-s-minicactus" viewBox="0 0 7 7"><path class="cw-p-cr" d="M2 0h1v1h-1z"></path><path class="cw-p-wh" d="M3 0h1v1h-1z"></path><path class="cw-p-lf" d="M2 1h2v1h-2zM0 2h1v1h-1zM2 2h2v1h-2zM0 3h6v1h-6zM2 4h2v1h-2z"></path><path class="cw-p-pi" d="M5 2h1v1h-1z"></path><path class="cw-p-te" d="M1 5h5v1h-5zM2 6h3v1h-3z"></path></symbol><symbol id="cw-s-check" viewBox="0 0 7 6"><path class="cw-p-lf" d="M6 0h1v1h-1zM5 1h2v1h-2zM0 2h1v1h-1zM4 2h2v1h-2zM0 3h2v1h-2zM3 3h2v1h-2zM1 4h3v1h-3zM2 5h1v1h-1z"></path></symbol><symbol id="cw-s-globe" viewBox="0 0 11 11"><path class="cw-p-ol" d="M3 0h5v1h-5zM1 1h2v1h-2zM8 1h2v1h-2zM1 2h1v1h-1zM9 2h1v1h-1zM0 3h1v1h-1zM10 3h1v1h-1zM0 4h1v1h-1zM10 4h1v1h-1zM0 5h1v1h-1zM10 5h1v1h-1zM0 6h1v1h-1zM10 6h1v1h-1zM0 7h1v1h-1zM10 7h1v1h-1zM1 8h1v1h-1zM9 8h1v1h-1zM1 9h2v1h-2zM8 9h2v1h-2zM3 10h5v1h-5z"></path><path class="cw-p-sk" d="M3 1h2v1h-2zM6 1h2v1h-2zM2 2h1v1h-1zM6 2h3v1h-3zM1 3h2v1h-2zM6 3h4v1h-4zM1 4h3v1h-3zM6 4h2v1h-2zM1 5h7v1h-7zM1 6h2v1h-2zM4 6h6v1h-6zM1 7h1v1h-1zM6 7h4v1h-4zM2 8h1v1h-1zM6 8h3v1h-3zM3 9h5v1h-5z"></path><path class="cw-p-lf" d="M5 1h1v1h-1zM3 2h3v1h-3zM3 3h3v1h-3zM4 4h2v1h-2zM8 4h2v1h-2zM8 5h2v1h-2zM3 6h1v1h-1zM2 7h4v1h-4zM3 8h3v1h-3z"></path></symbol><symbol id="cw-s-chat" viewBox="0 0 12 8"><path class="cw-p-ol" d="M1 0h10v1h-10zM0 1h1v1h-1zM11 1h1v1h-1zM0 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM0 4h1v1h-1zM11 4h1v1h-1zM1 5h3v1h-3zM6 5h5v1h-5zM3 6h1v1h-1zM5 6h1v1h-1zM3 7h2v1h-2z"></path><path class="cw-p-wh" d="M1 1h10v1h-10zM1 2h10v1h-10zM1 3h2v1h-2zM4 3h2v1h-2zM7 3h2v1h-2zM10 3h1v1h-1zM1 4h10v1h-10zM4 5h2v1h-2zM4 6h1v1h-1z"></path></symbol><symbol id="cw-s-bubble" viewBox="0 0 16 10"><path class="cw-p-ol" d="M1 0h13v1h-13zM0 1h1v1h-1zM15 1h1v1h-1zM0 2h1v1h-1zM15 2h1v1h-1zM0 3h1v1h-1zM15 3h1v1h-1zM0 4h1v1h-1zM15 4h1v1h-1zM0 5h1v1h-1zM15 5h1v1h-1zM0 6h1v1h-1zM15 6h1v1h-1zM1 7h3v1h-3zM6 7h9v1h-9zM3 8h1v1h-1zM5 8h1v1h-1zM3 9h2v1h-2z"></path><path class="cw-p-cr" d="M1 1h14v1h-14zM1 2h14v1h-14zM1 3h1v1h-1zM13 3h2v1h-2zM1 4h14v1h-14zM1 5h1v1h-1zM9 5h6v1h-6zM1 6h14v1h-14zM4 7h2v1h-2zM4 8h1v1h-1z"></path><path class="cw-p-gr" d="M2 3h11v1h-11zM2 5h7v1h-7z"></path></symbol><symbol id="cw-s-toolbox" viewBox="0 0 16 10"><path class="cw-p-ol" d="M5 0h6v1h-6zM5 1h1v1h-1zM10 1h1v1h-1zM0 2h16v1h-16zM0 3h1v1h-1zM15 3h1v1h-1zM0 4h1v1h-1zM15 4h1v1h-1zM0 5h7v1h-7zM9 5h7v1h-7zM0 6h1v1h-1zM15 6h1v1h-1zM0 7h1v1h-1zM15 7h1v1h-1zM0 8h1v1h-1zM15 8h1v1h-1zM0 9h16v1h-16z"></path><path class="cw-p-sk" d="M1 3h14v1h-14zM1 4h14v1h-14z"></path><path class="cw-p-go" d="M7 5h2v1h-2zM7 6h2v1h-2z"></path><path class="cw-p-sd" d="M1 6h6v1h-6zM9 6h6v1h-6zM1 7h14v1h-14zM1 8h14v1h-14z"></path></symbol><symbol id="cw-s-phone" viewBox="0 0 10 16"><path class="cw-p-ol" d="M0 0h10v1h-10zM0 1h1v1h-1zM4 1h2v1h-2zM9 1h1v1h-1zM0 2h1v1h-1zM9 2h1v1h-1zM0 3h1v1h-1zM9 3h1v1h-1zM0 4h1v1h-1zM9 4h1v1h-1zM0 5h1v1h-1zM9 5h1v1h-1zM0 6h1v1h-1zM9 6h1v1h-1zM0 7h1v1h-1zM9 7h1v1h-1zM0 8h1v1h-1zM9 8h1v1h-1zM0 9h1v1h-1zM9 9h1v1h-1zM0 10h1v1h-1zM9 10h1v1h-1zM0 11h1v1h-1zM9 11h1v1h-1zM0 12h1v1h-1zM9 12h1v1h-1zM0 13h10v1h-10zM0 14h4v1h-4zM6 14h4v1h-4zM0 15h10v1h-10z"></path><path class="cw-p-bk" d="M1 1h3v1h-3zM6 1h3v1h-3zM1 2h8v1h-8zM1 3h1v1h-1zM8 3h1v1h-1zM1 4h1v1h-1zM8 4h1v1h-1zM1 5h1v1h-1zM8 5h1v1h-1zM1 6h8v1h-8zM1 7h1v1h-1zM8 7h1v1h-1zM1 8h1v1h-1zM8 8h1v1h-1zM1 9h1v1h-1zM8 9h1v1h-1zM1 10h8v1h-8zM1 11h8v1h-8zM1 12h8v1h-8z"></path><path class="cw-p-sk" d="M2 3h6v1h-6zM2 4h1v1h-1zM6 4h2v1h-2zM2 5h6v1h-6z"></path><path class="cw-p-wh" d="M3 4h3v1h-3zM3 8h3v1h-3z"></path><path class="cw-p-lf" d="M2 7h6v1h-6zM2 8h1v1h-1zM6 8h2v1h-2zM2 9h6v1h-6z"></path><path class="cw-p-gl" d="M4 14h2v1h-2z"></path></symbol><symbol id="cw-s-server" viewBox="0 0 12 14"><path class="cw-p-ol" d="M0 0h12v1h-12zM0 1h1v1h-1zM11 1h1v1h-1zM0 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM11 3h1v1h-1zM0 4h12v1h-12zM0 5h1v1h-1zM11 5h1v1h-1zM0 6h1v1h-1zM11 6h1v1h-1zM0 7h1v1h-1zM11 7h1v1h-1zM0 8h12v1h-12zM0 9h1v1h-1zM11 9h1v1h-1zM0 10h1v1h-1zM11 10h1v1h-1zM0 11h1v1h-1zM11 11h1v1h-1zM0 12h12v1h-12zM1 13h2v1h-2zM9 13h2v1h-2z"></path><path class="cw-p-gl" d="M1 1h10v1h-10zM1 2h1v1h-1zM3 2h1v1h-1zM10 2h1v1h-1zM1 3h10v1h-10zM1 5h10v1h-10zM1 6h1v1h-1zM3 6h1v1h-1zM10 6h1v1h-1zM1 7h10v1h-10zM1 9h10v1h-10zM1 10h1v1h-1zM3 10h1v1h-1zM10 10h1v1h-1zM1 11h10v1h-10z"></path><path class="cw-p-ok" d="M2 2h1v1h-1zM2 10h1v1h-1z"></path><path class="cw-p-gr" d="M4 2h6v1h-6zM4 6h6v1h-6zM4 10h6v1h-6z"></path><path class="cw-p-sk" d="M2 6h1v1h-1z"></path></symbol><symbol id="cw-s-cloudno" viewBox="0 0 16 12"><path class="cw-p-re" d="M0 0h2v1h-2zM1 1h2v1h-2zM2 2h2v1h-2zM3 3h2v1h-2zM4 4h2v1h-2zM5 5h2v1h-2zM6 6h2v1h-2zM7 7h2v1h-2zM8 8h2v1h-2zM9 9h2v1h-2zM10 10h2v1h-2zM11 11h2v1h-2z"></path><path class="cw-p-gr" d="M6 2h4v1h-4zM5 3h1v1h-1zM10 3h1v1h-1zM2 4h2v1h-2zM11 4h2v1h-2zM1 5h1v1h-1zM13 5h1v1h-1zM0 6h1v1h-1zM14 6h1v1h-1zM0 7h1v1h-1zM14 7h1v1h-1zM1 8h7v1h-7zM10 8h4v1h-4z"></path><path class="cw-p-gl" d="M6 3h4v1h-4zM6 4h5v1h-5zM2 5h3v1h-3zM7 5h6v1h-6zM1 6h5v1h-5zM8 6h6v1h-6zM1 7h6v1h-6zM9 7h5v1h-5z"></path></symbol><symbol id="cw-s-bang" viewBox="0 0 2 6"><path class="cw-p-cur" d="M0 0h2v1h-2zM0 1h2v1h-2zM0 2h2v1h-2zM0 3h2v1h-2zM0 5h2v1h-2z"></path></symbol><symbol id="cw-s-play" viewBox="0 0 5 5"><path class="cw-p-cur" d="M0 0h1v1h-1zM0 1h3v1h-3zM0 2h5v1h-5zM0 3h3v1h-3zM0 4h1v1h-1z"></path></symbol><symbol id="cw-s-tel" viewBox="0 0 9 7"><path class="cw-p-cur" d="M0 0h2v1h-2zM0 1h3v1h-3zM0 2h2v1h-2zM1 3h2v1h-2zM2 4h2v1h-2zM3 5h2v1h-2zM6 5h3v1h-3zM4 6h5v1h-5z"></path></symbol><symbol id="cw-s-mail" viewBox="0 0 10 6"><path class="cw-p-cur" d="M0 0h10v1h-10zM0 1h2v1h-2zM8 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM7 2h1v1h-1zM9 2h1v1h-1zM0 3h1v1h-1zM3 3h4v1h-4zM9 3h1v1h-1zM0 4h1v1h-1zM9 4h1v1h-1zM0 5h10v1h-10z"></path></symbol></defs></svg><div class="cw-site" lang="sk"><div class="cw-in">
+<a class="cw-skip" href="#tartalom">Preskočiť na obsah</a>
+<header class="cw-top"><div class="cw-wrap cw-top__in"><a class="cw-mark" href="#kezdet">Sweetwater</a><nav class="cw-nav" aria-label="Hlavná navigácia"><a href="#tev">Činnosti</a><a href="#adatok">Údaje o spoločnosti</a><a href="#kapcsolat">Kontakt</a></nav></div></header>
+<nav class="cw-chipnav" aria-label="Hlavná navigácia"><a href="#tev">Činnosti</a><a href="#adatok">Údaje o spoločnosti</a><a href="#kapcsolat">Kontakt</a></nav>
+<main id="tartalom" class="cw-main">
+<section class="cw-hero" id="kezdet" aria-label="Sweetwater"><div class="cw-wrap cw-hero__grid"><div>
+<span class="cw-eyebrow"><svg class="cw-px" viewBox="0 0 11 11" width="22" height="22" aria-hidden="true" focusable="false"><use href="#cw-s-globe" width="11" height="11"></use></svg><span>Štúrovo · Slovensko</span></span>
+<h1 class="cw-h1">Sweetwater s.r.o.</h1>
+<p class="cw-lead">Konzultácie, prevádzka IT a skladovanie.</p>
+<div class="cw-ctas"><a class="cw-btn cw-btn--pri cw-btn--lg" href="mailto:info@sweetwater.sk">Napíšte nám</a><a class="cw-btn cw-btn--sec cw-btn--lg" href="#adatok">Údaje o spoločnosti</a></div>
+</div>
+<div class="cw-herocard"><div class="cw-strip"><span>Karta spoločnosti</span><span class="cw-type">s.r.o.</span></div><div class="cw-dex__win"><svg class="cw-px" viewBox="0 0 48 24" width="288" height="144" aria-hidden="true" focusable="false"><use href="#cw-s-globe" x="14" y="2" width="20" height="20"></use></svg></div><dl class="cw-dex__stats"><div><dt>Sídlo</dt><dd>Štúrovo</dd></div><div><dt>IČO</dt><dd>54 884 845</dd></div><div><dt>Zapísaná</dt><dd>2022-09-14</dd></div></dl></div>
+</div></section>
+<section class="cw-sec" id="tev" aria-labelledby="h-tev"><div class="cw-wrap"><div class="cw-head-row"><div><p class="cw-kicker">Činnosti</p><h2 class="cw-h2" id="h-tev">Čomu sa venujeme</h2></div></div>
+<div class="cw-dexgrid"><article class="cw-dex" aria-labelledby="t-1"><div class="cw-strip"><span>01</span><span class="cw-type">Poradenstvo</span></div><div class="cw-dex__win"><svg class="cw-px" viewBox="0 0 48 24" width="288" height="144" aria-hidden="true" focusable="false"><use href="#cw-s-bubble" x="8" y="2" width="32" height="20"></use></svg></div><h3 id="t-1">Konzultácie</h3><p>Poradenstvo v oblasti informačných technológií, biológie a ochrany životného prostredia.</p></article><article class="cw-dex cw-dex--reg" aria-labelledby="t-2"><div class="cw-strip"><span>02</span><span class="cw-type">IT</span></div><div class="cw-dex__win"><svg class="cw-px" viewBox="0 0 48 24" width="288" height="144" aria-hidden="true" focusable="false"><use href="#cw-s-server" x="15.428571428571429" y="2" width="17.142857142857142" height="20"></use></svg></div><h3 id="t-2">Prevádzka IT</h3><p>Správa a prevádzka serverov, sietí a IT služieb.</p></article><article class="cw-dex" aria-labelledby="t-3"><div class="cw-strip"><span>03</span><span class="cw-type">Sklad</span></div><div class="cw-dex__win"><svg class="cw-px" viewBox="0 0 48 24" width="288" height="144" aria-hidden="true" focusable="false"><use href="#cw-s-minihouse" x="14" y="2" width="20" height="20"></use></svg></div><h3 id="t-3">Skladovanie</h3><p>Skladovanie tovaru a materiálu.</p></article></div>
+</div></section>
+<section class="cw-sec cw-sec--alt" id="adatok" aria-labelledby="h-adatok"><div class="cw-wrap"><p class="cw-kicker">Údaje o spoločnosti</p><h2 class="cw-h2" id="h-adatok">Sweetwater s.r.o.</h2>
+<div class="cw-imprint"><p><b>Sídlo:</b> Komenského 317/135, 943 01 Štúrovo</p><p><b>IČO:</b> 54 884 845</p><p><b>DIČ:</b> 2121817698</p><p><b>IČ DPH:</b> SK2121817698</p><p><b>Zápis:</b> Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 58288/N</p><p><b>E-mail:</b> info@sweetwater.sk</p><p><b>Hosting:</b> Sweetwater s.r.o., Komenského 317/135, 943 01 Štúrovo, Slovensko</p></div>
+</div></section>
+<section class="cw-sec" id="kapcsolat" aria-labelledby="h-kapcsolat"><div class="cw-wrap"><p class="cw-kicker">Kontakt</p><h2 class="cw-h2" id="h-kapcsolat">Napíšte nám e-mail</h2>
+<div class="cw-contact"><div class="cw-contact__row"><a class="cw-btn cw-btn--chat" href="mailto:info@sweetwater.sk"><svg class="cw-px" viewBox="0 0 10 6" width="20" height="12" aria-hidden="true" focusable="false"><use href="#cw-s-mail" width="10" height="6"></use></svg>info@sweetwater.sk</a></div><p><b>Adresa:</b> Komenského 317/135, 943 01 Štúrovo</p></div>
+</div></section>
+</main>
+<footer class="cw-foot"><div class="cw-wrap"><p class="cw-mark">Sweetwater</p><p>Táto stránka nepoužíva súbory cookie a neobsahuje formulár. Návštevnosť meriame na vlastnom serveri bez ukladania IP adries.</p><p>© 2026 Sweetwater s.r.o.</p></div></footer>
+</div></div><script>(function companyViewBeacon()       {
+  const send = (name        )       => {
+    try {
+      navigator.sendBeacon("https://caritas.sweetwater.sk/api/company-view", JSON.stringify({ path: location.pathname, referrer: document.referrer, language: navigator.language.split(",")[0], name }));
+    } catch { /* A mérés hibája nem akadályozza az oldalt. */ }
+  };
+  send("view");
+  document.addEventListener("click", (event) => {
+    try {
+      if (event.target instanceof Element && event.target.closest('a[href^="mailto:"]')) send("kapcsolat");
+    } catch { /* A kapcsolat mérés nélkül is megnyitható. */ }
+  });
+})()</script></body></html>
